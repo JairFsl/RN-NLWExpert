@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "NLW-Expert",
-    "slug": "NLW-Expert",
+    "name": "RN-NLW-Expert",
+    "slug": "RN-NLW-Expert",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "RN-NLW-Expert",
     "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -26,10 +26,7 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      "expo-font"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     }

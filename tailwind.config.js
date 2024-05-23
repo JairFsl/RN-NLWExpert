@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        regular: "Inter_400Regular",
-        medium: "Inter_500Medium",
-        semibold: "Inter_600SemiBold",
-        bold: "Inter_700Bold",
+        AppRegular: "Inter_400Regular",
+        AppMedium: "Inter_500Medium",
+        AppSemiBold: "Inter_600SemiBold",
+        AppBold: "Inter_700Bold",
       },
     },
   },
