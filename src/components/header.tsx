@@ -1,27 +1,30 @@
 import { Feather } from "@expo/vector-icons";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 interface IHeaderProps {
   title?: string;
-  showCart?: boolean;
+  cartQuatityItems?: number;
 }
 
 export function Header({
   title = "Título do Header",
-  showCart = false,
+  cartQuatityItems = 0,
 }: IHeaderProps) {
   return (
-    <>
-      <View className=" flex flex-row h-28 w-full items-center justify-between px-3 gap">
-        <View className="flex flex-col items-center justify-center">
-          <Image source={require("@/assets/logo.png")} className="h-6 w-32" />
-          <Text className="text-white text-xl font-semibold">{title}</Text>
-        </View>
-        <View className="h-full items-center justify-center">
-          {showCart && <Feather name="shopping-cart" size={24} color="white" />}
-        </View>
+    <View className="flex-row items-center border-b border-b-gray-500 pb-5 px-3">
+      <View className="flex-1">
+        <Image source={require("@/assets/logo.png")} className="h-6 w-32" />
+        <Text className="text-white text-xl font-semibold mt-2">{title}</Text>
       </View>
-      <View className="my-1 w-full border border-solid border-gray-600" />
-    </>
+      <TouchableOpacity className="relative">
+        {cartQuatityItems > 0 && (
+          <View className="bg-lime-300 w-4 h-4 rounded-full items-center justify-center top-2 z-10 -right-3.5">
+            <Text className="text-slate-900 font-bold text-xs">1</Text>
+          </View>
+        )}
+
+        <Feather name="shopping-bag" color={"#fff"} size={24} />
+      </TouchableOpacity>
+    </View>
   );
 }
